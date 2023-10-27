@@ -1,0 +1,19 @@
+version: "1"
+services:
+  reverse-proxy:
+    container_name: proxy-server
+    build:
+      context: ./packages
+      dockerfile: prod.Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+
+  next-app:
+    container_name: next-app
+    build:
+      context: ./packages/next-app
+      dockerfile: prod.Dockerfile
+    restart: always
+    ports:
+      - 3000:3000

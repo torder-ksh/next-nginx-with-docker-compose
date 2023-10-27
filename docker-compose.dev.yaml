@@ -1,0 +1,46 @@
+version: "1"
+services:
+  reverse-proxy:
+    container_name: proxy-server
+    build:
+      context: ./packages
+      dockerfile: dev.Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+
+  next-app:
+    container_name: next-app
+    build:
+      context: ./packages/next-app
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./packages/next-app/src:/app/src
+      # - ./packages/next-app/public:/app/public
+      # - ./packages/next-app/.next:/app/.next
+    # environment:
+    #   - NODE_ENV=development
+    #   - CHOKIDAR_USEPOLLING=true
+    #   - WATCHPACK_POLLING=true
+    restart: always
+    ports:
+      - 3000:3000
+
+  vue-app:
+    container_name: vue-app
+    build:
+      context: ./packages/vue-app
+      dockerfile: dev.Dockerfile
+    volumes:
+      - "./packages/vue-app/src:/app/src"
+      # - "./packages/vue-app/node_modules:/app"
+    ports:
+      - 3001:3001
+    # networks:
+    #   - my_network
+
+  # vue-app:
+  #   container_name: vue-app
+  #   build:
+  #     context: ./packages/vue-app
+  #     dockerfile: dev.Dockerfile
