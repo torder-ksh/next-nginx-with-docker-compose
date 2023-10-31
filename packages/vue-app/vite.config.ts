@@ -10,10 +10,10 @@ export default defineConfig({
     port: 3001,
     hmr: {
       clientPort: 8080
-    },
-    watch: {
-      usePolling: true
     }
+    // watch: {
+    //   usePolling: true
+    // }
   },
   plugins: [vue()],
   resolve: {
