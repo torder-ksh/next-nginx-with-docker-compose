@@ -20,6 +20,9 @@ importers:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@tailwindcss/forms':
+        specifier: ^0.5.6
+        version: 0.5.6(tailwindcss@3.3.5)
       '@types/node':
         specifier: ^20
         version: 20.8.9
@@ -30,7 +33,7 @@ importers:
         specifier: ^18
         version: 18.2.14
       autoprefixer:
-        specifier: ^10
+        specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.31)
       eslint:
         specifier: ^8
@@ -39,10 +42,10 @@ importers:
         specifier: 13.5.6
         version: 13.5.6(eslint@8.52.0)(typescript@5.2.2)
       postcss:
-        specifier: ^8
+        specifier: ^8.4.31
         version: 8.4.31
       tailwindcss:
-        specifier: ^3
+        specifier: ^3.3.5
         version: 3.3.5
       typescript:
         specifier: ^5
@@ -679,6 +682,15 @@ packages:
     dependencies:
       tslib: 2.6.2
     dev: false
+
+  /@tailwindcss/forms@0.5.6(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.3.5
+    dev: true
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -3666,6 +3678,11 @@ packages:
   /mimic-fn@4.0.0:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
+    dev: true
+
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimatch@3.1.2:
