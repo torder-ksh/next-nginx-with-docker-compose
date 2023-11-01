@@ -24,6 +24,7 @@ const config: Config = {
         'primary-600': '#0400DB',
         'primary-700': '#0400B8',
         'primary-800': '#03008F',
+        
         'red-100': '#F1F1F1',
         'red-200': '#FFA3AC',
         'red-300': '#FF808B',
@@ -33,6 +34,7 @@ const config: Config = {
         'red-700': '#99000E',
         'red-800': '#66000A',
         'red-900': '#330005',
+
         'black-100': '#FFD6DA',
         'black-200': '#D9D9D9',
         'black-300': '#B3B3B3',
@@ -106,8 +108,6 @@ const config: Config = {
         'blue-700': '#084BAB',
         'blue-800': '#05367A',
         'blue-900': '#032049',
-
-
       },
     },
   },
