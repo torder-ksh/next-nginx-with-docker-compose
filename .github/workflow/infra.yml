@@ -1,0 +1,20 @@
+# 워크플로우 이름 정의
+name: Infra
+
+# 워크플로우가 실행될 이벤트를 정의
+on:
+  workflow_dispatch:
+
+# 워크플로우가 실행될 job을 정의
+jobs:
+  # job 이름 정의
+  infra:
+    # job이 실행될 runner를 정의
+    runs-on: ubuntu-latest
+
+    # 작업 단계
+    steps:
+      # 작업 단계 이름 정의
+      - name: echo test
+        run: |
+        # 테스트
